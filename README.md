@@ -1,125 +1,216 @@
-# System Design
+# System Design Learning Path
 
-## Scalability
+Welcome to the **System Design Learning Repository**! This guide covers essential concepts for building scalable, reliable, and efficient systems.
 
-Scalability is the ability of a system to handle an increasing amount of workload by adding resources. It's a crucial aspect of system design that ensures applications can grow and perform efficiently as demand increases.
+---
 
-### Types of Scalability
+## 📚 Lessons
 
-#### 1. **Horizontal Scalability (Scale Out)**
-Adding more machines/servers to the system to distribute the load.
+<div align="center">
 
-**Advantages:**
-- Easy to add new nodes dynamically
-- Better fault tolerance (failure of one node doesn't crash the system)
-- Supports unlimited growth
+### Lesson Overview
 
-**Disadvantages:**
-- Increased complexity in system coordination
-- Network latency between nodes
-- Data consistency challenges
+| Lesson | Topic | Description |
+|--------|-------|-------------|
+| [📖 Lesson 1](#lesson-1) | **Scalability** | Learn about horizontal and vertical scaling strategies |
+| [📖 Lesson 2](#lesson-2) | **Load Balancing** | Master load distribution techniques |
+| [📖 Lesson 3](#lesson-3) | **Caching** | Optimize performance with caching strategies |
+| [📖 Lesson 4](#lesson-4) | **Database Design** | Design efficient databases with replication & sharding |
+| [📖 Lesson 5](#lesson-5) | **Microservices** | Build scalable service-oriented architecture |
+| [📖 Lesson 6](#lesson-6) | **System Monitoring** | Track and optimize system performance |
 
-**Example Use Case:**
-- Web servers behind a load balancer
-- Distributed databases with sharding
-- Microservices architecture
+</div>
 
-#### 2. **Vertical Scalability (Scale Up)**
-Increasing the capacity of existing machines (CPU, RAM, Storage).
+---
 
-**Advantages:**
-- Simple to implement
-- No data consistency issues
-- Lower operational complexity
+## Lesson Cards
 
-**Disadvantages:**
-- Limited by hardware constraints
-- Single point of failure (if the server goes down)
-- Downtime required for upgrades
+<table>
+<tr>
+<td width="50%">
 
-**Example Use Case:**
-- Database servers with more powerful hardware
-- Single-threaded applications needing more resources
-- In-memory caches
+### 📖 Lesson 1
+**Scalability**
 
-### Scalability Design Patterns
+Learn the fundamentals of building systems that can handle growth and increased workload.
 
-#### **Load Balancing**
-Distributes incoming requests across multiple servers.
+- ✅ Types of Scalability
+- ✅ Horizontal vs Vertical Scaling
+- ✅ Best Practices
+- ✅ Key Metrics
+
+[🔗 **View Full Lesson →**](./lessons/01-scalability.md)
+
+</td>
+<td width="50%">
+
+### 📖 Lesson 2
+**Load Balancing**
+
+Distribute incoming requests efficiently across multiple servers.
+
+- ✅ Load Balancer Types
+- ✅ Algorithms
+- ✅ Use Cases
+- ✅ Real-world Examples
+
+[🔗 **View Full Lesson →**](./lessons/02-load-balancing.md)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📖 Lesson 3
+**Caching**
+
+Improve system performance using caching layers and strategies.
+
+- ✅ Cache Types
+- ✅ Caching Strategies
+- ✅ Tools (Redis, Memcached)
+- ✅ When to Use Cache
+
+[🔗 **View Full Lesson →**](./lessons/03-caching.md)
+
+</td>
+<td width="50%">
+
+### 📖 Lesson 4
+**Database Design**
+
+Master database optimization, replication, and sharding techniques.
+
+- ✅ Database Replication
+- ✅ Sharding Strategies
+- ✅ Data Consistency
+- ✅ Query Optimization
+
+[🔗 **View Full Lesson →**](./lessons/04-database-design.md)
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📖 Lesson 5
+**Microservices Architecture**
+
+Break down monolithic applications into scalable services.
+
+- ✅ Service Design
+- ✅ API Gateways
+- ✅ Service Communication
+- ✅ Deployment Patterns
+
+[🔗 **View Full Lesson →**](./lessons/05-microservices.md)
+
+</td>
+<td width="50%">
+
+### 📖 Lesson 6
+**System Monitoring & Metrics**
+
+Track, measure, and optimize system performance.
+
+- ✅ Key Metrics
+- ✅ Monitoring Tools
+- ✅ Alert Strategies
+- ✅ Performance Analysis
+
+[🔗 **View Full Lesson →**](./lessons/06-monitoring.md)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🎯 Quick Navigation
+
+- **[Lesson 1: Scalability](./lessons/01-scalability.md)** - Foundation of system design
+- **[Lesson 2: Load Balancing](./lessons/02-load-balancing.md)** - Request distribution
+- **[Lesson 3: Caching](./lessons/03-caching.md)** - Performance optimization
+- **[Lesson 4: Database Design](./lessons/04-database-design.md)** - Data management
+- **[Lesson 5: Microservices](./lessons/05-microservices.md)** - Service architecture
+- **[Lesson 6: Monitoring](./lessons/06-monitoring.md)** - System observability
+
+---
+
+## 📝 How to Use This Repository
+
+1. **Start with Lesson 1** - Get fundamentals of scalability
+2. **Progress sequentially** - Each lesson builds on previous concepts
+3. **Read the detailed content** - Click on any lesson card to view full content
+4. **Review examples** - Each lesson includes real-world use cases
+5. **Practice & Apply** - Implement concepts in your own projects
+
+---
+
+## 🎓 Prerequisites
+
+- Basic understanding of web applications
+- Familiarity with databases (SQL/NoSQL)
+- Knowledge of APIs and HTTP
+- Basic networking concepts
+
+---
+
+## 💡 Key Takeaways
+
+| Concept | Why It Matters |
+|---------|----------------|
+| **Scalability** | Build systems that grow with demand |
+| **Load Balancing** | Prevent single point of failure |
+| **Caching** | Reduce latency and database load |
+| **Database Design** | Ensure data consistency and reliability |
+| **Microservices** | Enable independent scaling of components |
+| **Monitoring** | Identify and fix issues proactively |
+
+---
+
+## 📊 Learning Path Visualization
 
 ```
-    Client Requests
-         ↓
-    [Load Balancer]
-    ↙      ↓       ↘
-  [Server1] [Server2] [Server3]
+┌─────────────────────────────────────────────────────┐
+│        Scalability Fundamentals (Lesson 1)          │
+│  ↓                                                   │
+├─────────────────────────────────────────────────────┤
+│  Load Balancing    Caching          Database Design  │
+│  (Lesson 2)        (Lesson 3)       (Lesson 4)      │
+│     ↓                  ↓                 ↓           │
+├─────────────────────────────────────────────────────┤
+│      Microservices Architecture (Lesson 5)          │
+│  ↓                                                   │
+├─────────────────────────────────────────────────────┤
+│    Monitoring & Metrics (Lesson 6)                  │
+│  ↓                                                   │
+├─────────────────────────────────────────────────────┤
+│   Ready for Real-World System Design!               │
+└─────────────────────────────────────────────────────┘
 ```
 
-#### **Database Sharding**
-Partitioning data across multiple database instances based on a shard key.
+---
 
-```
-User Data:
-- Shard 1: User IDs 1-1M (DB Instance 1)
-- Shard 2: User IDs 1M-2M (DB Instance 2)
-- Shard 3: User IDs 2M-3M (DB Instance 3)
-```
+## 🚀 Resources
 
-#### **Caching**
-Storing frequently accessed data in faster storage layers.
+- 📚 [System Design Primer](https://github.com/donnemartin/system-design-primer)
+- 🎬 [YouTube Tutorials](https://www.youtube.com)
+- 📖 [Designing Data-Intensive Applications](https://dataintensive.net/)
+- 🔗 [AWS Architecture Best Practices](https://aws.amazon.com/architecture/)
 
-```
-Client → [Cache Layer] → [Database]
-         (Redis/Memcached)
-```
+---
 
-#### **Database Replication**
-Creating copies of data across multiple servers for redundancy and read scaling.
+## 👤 Author
 
-```
-    [Master DB] (Writes)
-    ↙        ↘
-[Slave 1]  [Slave 2] (Reads)
-```
+**Shorifuzzaman-Git**
 
-#### **Microservices**
-Breaking a monolithic application into smaller, independently scalable services.
+---
 
-```
-[API Gateway]
-    ↙  ↓  ↘
-[User Service] [Product Service] [Order Service]
-    ↓            ↓                  ↓
-  [DB]         [DB]              [DB]
-```
+## 📄 License
 
-### Key Metrics for Scalability
+This project is licensed under the MIT License - see LICENSE file for details.
 
-| Metric | Definition |
-|--------|-----------|
-| **Throughput** | Number of requests handled per unit time |
-| **Latency** | Time taken to process a single request |
-| **Capacity** | Maximum workload the system can handle |
-| **Response Time** | Total time from request to response |
+---
 
-### Best Practices for Scalable Systems
-
-1. **Stateless Design** - Servers should not store client state, enabling easy horizontal scaling
-2. **Asynchronous Processing** - Use message queues for non-critical operations
-3. **Monitoring & Metrics** - Track performance and identify bottlenecks
-4. **Database Optimization** - Indexing, query optimization, and partitioning
-5. **Content Delivery** - Use CDNs for static content distribution
-6. **Auto-scaling** - Automatically add/remove resources based on demand
-7. **Graceful Degradation** - System should function even when some components fail
-
-### Scalability Challenges
-
-- **Data Consistency** - Maintaining ACID properties in distributed systems
-- **Network Latency** - Communication overhead in distributed architecture
-- **Operational Complexity** - Increased difficulty in deployment and monitoring
-- **Cost** - Infrastructure and operational costs increase with scaling
-- **Testing** - Difficult to simulate real-world scaling scenarios
-
-### Conclusion
-
-Building scalable systems requires careful planning and the right architectural patterns. The choice between horizontal and vertical scaling depends on your specific use case, budget, and requirements. Most modern applications use a combination of both approaches to achieve optimal performance and reliability.
+**Happy Learning! 🎉**
